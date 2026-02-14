@@ -26,15 +26,15 @@ int main()
     }
 
     struct music *m1 = (struct music *)malloc(sizeof(struct music));
-    strcpy(m1->s_name, "./songs/hehe.mpeg");
+    strcpy(m1->s_name, "./songs/inkem.mp3");
     m1->next_song = NULL;
     
     struct music *m2 = (struct music *)malloc(sizeof(struct music));
-    strcpy(m2->s_name, "./songs/kya.mpeg");
+    strcpy(m2->s_name, "./songs/jhoom.mp3");
     m2->next_song = m1;
 
     struct music *m3 = (struct music *)malloc(sizeof(struct music));
-    strcpy(m3->s_name, "./songs/music.mpeg");
+    strcpy(m3->s_name, "./songs/indila.mp3");
     m3->next_song = m2;
 
     m1->prev_song = m2;
