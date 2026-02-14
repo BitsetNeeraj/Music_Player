@@ -33,10 +33,6 @@ This project demonstrates linked lists, dynamic memory allocation, and audio pla
 
 ```
 Music_Player/
-├── meme/
-|  ├── music.mp3
-|  ├── ...
-|  ├── kuch.mp3
 ├── songs/
 |  ├── dil.mp3
 |  ├── ...
