@@ -24,18 +24,24 @@ int main() {
     ma_engine engine;
 
     result = ma_engine_init(NULL, &engine);
-    if (result != MA_SUCCESS) return -1;
 
-    // Creating nodes
-    struct music *m1 = create_node("./songs/dil.mp3");
-    struct music *m2 = create_node("./songs/noon.mp3");
-    struct music *m3 = create_node("./songs/sath.mp3");
+    if (result != MA_SUCCESS)
+    {
+        return -1;
+    }
 
-    // Connecting them (Doubly Linked)
-    m3->next_song = m2;
-    m2->prev_song = m3;
+    struct music *m1 = (struct music *)malloc(sizeof(struct music));
+    strcpy(m1->s_name, "./songs/inkem.mp3");
+    m1->next_song = NULL;
     
+    struct music *m2 = (struct music *)malloc(sizeof(struct music));
+    strcpy(m2->s_name, "./songs/indila.mp3");
     m2->next_song = m1;
+
+    struct music *m3 = (struct music *)malloc(sizeof(struct music));
+    strcpy(m3->s_name, "./songs/jhoom.mp3");
+    m3->next_song = m2;
+
     m1->prev_song = m2;
 
     struct music *current = m3;
