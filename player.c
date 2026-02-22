@@ -15,7 +15,7 @@ int main()
         return -1;
     }
 
-    ma_engine_play_sound(&engine, "./songs/music.mpeg", NULL);
+    ma_engine_play_sound(&engine, "./songs/noon.mp3", NULL);
 
     printf("Press Enter to quit...");
     getchar();
